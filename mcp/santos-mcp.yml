@@ -1,0 +1,22 @@
+name: Santos MCP Server
+description: >-
+  No official Santos MCP server, hosted or local, was found. Santos Ltd publishes no public
+  developer portal, OpenAPI or other API contract, so no candidate tool list could be
+  derived either. This file records that negative finding.
+type: MCPServer
+generated: '2026-10-22'
+method: none
+source:
+- https://santos.com/mcp (pre-flight probe returned 403, with a 403 control: opaque edge, not evidence of a server)
+- 'web search 2026-10-22: "Santos Ltd energy MCP server OR developer API santos.com" returned no Santos results'
+status: none
+deployment:
+  mode: none
+  auth: unknown
+  verified: searched
+tools: []
+notes: >-
+  santos.com answers 403 to /mcp and to the control path alike (see the pre-flight
+  contract_discovery opaque[] entry), so that status says nothing about an MCP server.
+  There is no OpenAPI under openapi/ to derive tools from, so no tool crosswalk, overlay or
+  agent skills were produced.

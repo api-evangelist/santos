@@ -1,0 +1,89 @@
+generated: '2026-10-22'
+method: searched
+probe: true
+source: https://www.santos.com/privacy/
+scope_note: >-
+  Santos Limited is an Australian oil and gas producer with no public API or developer program. The only
+  legal page the site links (footer "Privacy") is its Privacy Statement, "Last updated: 19 December 2024".
+  The page answered HTTP 202 with an empty body to a plain GET and was read through a headless browser
+  render (also reported 202, title "Privacy | Santos", 17,378 characters of text). No terms of service,
+  trust center, subprocessor list, AI statement or accessibility statement was linked from the site.
+signals:
+  data_subject_request:
+    url: https://www.santos.com/privacy/
+    section: 'ACCESS TO, AND CORRECTION OF, PERSONAL INFORMATION'
+    rights_named: [access, correction]
+    channel: Compliance Team (postal/contact details on the privacy page)
+    escalation: Office of the Australian Information Commissioner (OAIC)
+    evidence:
+    - source: https://www.santos.com/privacy/
+      http_status: 202
+      fetched: '2026-10-22'
+      quote: >-
+        You may request access to your personal information by contacting us using the details provided
+        below).  Upon receiving an access request, we may seek further details from you in order to verify
+        your identity.
+    - source: https://www.santos.com/privacy/
+      http_status: 202
+      fetched: '2026-10-22'
+      quote: >-
+        Where personal information is out-of-date or incorrect, please let us know by contacting us and we
+        will correct it.
+    - source: https://www.santos.com/privacy/
+      http_status: 202
+      fetched: '2026-10-22'
+      quote: >-
+        If a privacy concern or complaint is not resolved to your satisfaction, you can contact the Office of
+        the Australian Information Commissioner (“OAIC”).
+    note: >-
+      Access and correction rights under the Australian Privacy Act / APPs, with identity verification, a
+      possible fee for access, and OAIC escalation. No deletion or portability right is named and no fixed
+      response SLA is given ("within a reasonable period of time").
+  data_residency:
+    url: https://www.santos.com/privacy/
+    section: 'Do we disclose your personal information to anyone located overseas?'
+    evidence:
+    - source: https://www.santos.com/privacy/
+      http_status: 202
+      fetched: '2026-10-22'
+      quote: >-
+        The overseas locations to which your personal information may be disclosed, transmitted, stored or
+        accessed from include but are not limited to, Papua New Guinea, the United States, Indonesia,
+        Vietnam, Bangladesh, India, Timor-Leste and Singapore.
+    - source: https://www.santos.com/privacy/
+      http_status: 202
+      fetched: '2026-10-22'
+      quote: >-
+        If we disclose personal information to a recipient located overseas, we will take steps to ensure
+        that the overseas disclosure complies with the Privacy Act and the APPs.
+    note: >-
+      A cross-border disclosure statement naming destination countries (explicitly non-exhaustive), not a
+      data-residency commitment: data may leave Australia, safeguarded by contract.
+  subprocessors:
+    url: https://www.santos.com/privacy/
+    section: 'Do we disclose your personal information to anyone outside of Santos?'
+    list_published: false
+    evidence:
+    - source: https://www.santos.com/privacy/
+      http_status: 202
+      fetched: '2026-10-22'
+      quote: >-
+        our third party service providers, including providers of mail house, archival, auditing,
+        professional advice, marketing, recruitment, data processing, security services, technology and
+        consultation services;
+    note: >-
+      Only categories of third-party service providers are disclosed; no named subprocessor list was found.
+  incident_notification:
+    url: https://www.santos.com/privacy/
+    section: 'STORAGE AND SECURITY OF PERSONAL INFORMATION'
+    evidence:
+    - source: https://www.santos.com/privacy/
+      http_status: 202
+      fetched: '2026-10-22'
+      quote: >-
+        If any unauthorised access or disclosure of your personal information occurs, we will comply with
+        our obligations under the Privacy Act in dealing with that unauthorised access or disclosure,
+        including any obligations in respect of eligible data breaches under the Privacy Act.
+    note: >-
+      Commits to the statutory Notifiable Data Breaches scheme under the Australian Privacy Act; no
+      contractual notification window is stated.

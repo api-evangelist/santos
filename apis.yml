@@ -1,23 +1,95 @@
 aid: santos
+
 name: Santos
-description: 'Santos is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Santos Ltd is an Australian-headquartered global energy company with oil and gas operations across Australia,
+  Papua New Guinea, Timor-Leste and the United States. Its website describes it as providing reliable, affordable energy for
+  progress while seeking to provide lower carbon energy over time. Santos was surfaced via the API Evangelist harvest backlog
+  (source: australia-apidays-2026); its public site (santos.com) publishes corporate, investor, news and careers information
+  and no public developer portal or API documentation was found.'
+
 url: https://raw.githubusercontent.com/api-evangelist/santos/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-22 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Energy
+- Oil and Gas
+- Natural Gas
+- LNG
+- Australia
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://www.santos.com/wp-content/uploads/2023/04/cropped-android-chrome-512x512-1.png
+
 common:
+- type: SecurityTxt
+  url: well-known/santos-security.txt
+- type: SecurityTxt
+  url: well-known/santos-santos-security.txt
+- type: WellKnown
+  url: well-known/santos-well-known.yml
+- type: Hosts
+  url: hosts/santos-hosts.yml
+- type: Vendors
+  url: vendors/santos-vendors.yml
+- type: DomainSecurity
+  url: security/santos-domain-security.yml
 - type: Website
-  url: https://santos.com/
+  url: https://www.santos.com/
+- type: Newsroom
+  url: https://www.santos.com/news/
+- type: PrivacyPolicy
+  url: https://www.santos.com/privacy/
+- type: Support
+  url: https://www.santos.com/contact-us/
+- type: Careers
+  url: https://www.santos.com/careers/
+- type: Investors
+  url: https://www.santos.com/investors/
+- type: LinkedIn
+  url: https://www.linkedin.com/company/10716
+- type: Twitter
+  url: https://twitter.com/SantosLtd
+- type: YouTube
+  url: https://www.youtube.com/user/santosltd
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: 'Identity verified from santos.com homepage title "Santos: A Global Energy Pioneer" and meta description; no developer
+    portal, API docs or API reference linked from the site.'
+  evidence:
+  - url: https://www.santos.com/
+    status: 200
+  - url: https://www.santos.com/news/
+    status: 200
+  - url: https://www.santos.com/privacy/
+    status: 200
+  - url: https://www.santos.com/contact-us/
+    status: 200
+x-enrichment:
+  date: '2026-10-22'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

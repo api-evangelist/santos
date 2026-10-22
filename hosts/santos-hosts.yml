@@ -1,0 +1,91 @@
+generated: '2026-10-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 4
+  other_domain: 0
+  platform: 3
+  roles:
+  - api
+  - other
+  - website
+hosts:
+- host: api.santos.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: santos.com
+  role: api
+  relation: own
+- host: ourstory.santos.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: santos.com
+  role: other
+  relation: own
+- host: santos.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: santos.com
+  role: other
+  relation: own
+- host: twitter.com
+  found_by:
+  - pointer
+  types:
+  - Twitter
+  serves: []
+  registrable_domain: twitter.com
+  role: other
+  relation: platform
+- host: www.linkedin.com
+  found_by:
+  - pointer
+  types:
+  - LinkedIn
+  serves: []
+  registrable_domain: linkedin.com
+  role: other
+  relation: platform
+- host: www.santos.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Newsroom
+  - PrivacyPolicy
+  - Support
+  - Careers
+  - Investors
+  serves:
+  - cdn
+  vendor: cloudfront
+  registrable_domain: santos.com
+  role: website
+  relation: own
+- host: www.youtube.com
+  found_by:
+  - pointer
+  types:
+  - YouTube
+  serves: []
+  registrable_domain: youtube.com
+  role: other
+  relation: platform

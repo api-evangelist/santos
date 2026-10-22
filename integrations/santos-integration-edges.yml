@@ -1,0 +1,21 @@
+generated: '2026-10-22'
+method: none
+source:
+- https://zapier.com/apps/santos/integrations
+- https://n8n.io/integrations/santos/
+- https://composio.dev/toolkits/santos
+- https://monid.ai/tools/santos
+checked:
+- https://zapier.com/apps/santos/integrations (404)
+- https://www.santos.com/ (corporate site; no integrations/partners/developer link in nav or footer per pre-flight
+  site_links)
+- 'web search: "Santos Ltd energy developer API documentation" (only third-party stock-data APIs)'
+- https://composio.dev/toolkits/santos
+- https://monid.ai/tools/santos
+- https://n8n.io/integrations/santos/
+- https://zapier.com/apps/santos/integrations
+summary: Santos Ltd is an energy company with no public developer portal, API, app listing or integrations page;
+  no integration edges found.
+marketplace_apps: []
+edges: []
+templates: []
